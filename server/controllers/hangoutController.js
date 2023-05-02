@@ -21,7 +21,7 @@ const getHangouts = asyncHandler(async (req, res) => {
 // @route         POST /api/hangouts
 // @access        Private
 const postHangout = asyncHandler(async (req, res) => {
-  if (!req.body.text) {
+  if (!req.body.text && !req.body.user_id) {
     // if there is no text field, throw an error
     res.status(400);
     throw new Error("Text is required");
@@ -29,6 +29,7 @@ const postHangout = asyncHandler(async (req, res) => {
   // create a new hangout
   const hangout = await new Hangout({
     text: req.body.text,
+    user_id: req.body.user_id,
   });
 
   // save the hangout to the database

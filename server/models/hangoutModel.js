@@ -6,6 +6,19 @@ const hangoutSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  user_id: {
+    type: String,
+    required: true,
+  },
+  // for lat long location
+  location: {
+    type: { lat: Number, lng: Number },
+    required: true,
+  },
+  joining: {
+    type: [String],
+    required: true,
+  },
 });
 
 // export the model to be used in the controller
