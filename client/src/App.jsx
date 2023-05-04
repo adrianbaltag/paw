@@ -24,7 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/create_hangout" element={<CreateHangout />} />
       </Routes>
-      <MyMap />
+      {/* <MyMap /> */}
     </div>
   );
 }

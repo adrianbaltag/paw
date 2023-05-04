@@ -9,7 +9,10 @@ function Navbar() {
       {/* set dimension to div holding the svg */}
       <div className="logo " style={{ height: "40px", width: "40px" }}>
         {/* give 100% w / h for the svg to fill its parent */}
-        <Logo style={{ width: "100%", height: "100%" }} />
+        <Link to="/">
+          {" "}
+          <Logo style={{ width: "100%", height: "100%" }} />
+        </Link>
       </div>
       <div className="links gap-5 flex">
         <Link to="/profile">profile</Link>
