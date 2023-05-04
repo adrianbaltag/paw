@@ -1,6 +1,7 @@
 import React from "react";
 //
 import { ReactComponent as Logo } from "../assets/Logo.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -11,8 +12,9 @@ function Navbar() {
         <Logo style={{ width: "100%", height: "100%" }} />
       </div>
       <div className="links gap-5 flex">
-        <a>profile</a>
-        <a>hangouts</a>
+        <Link to="/profile">profile</Link>
+        <Link to="/hangouts">hangouts</Link>
+        <Link to="/create_hangout">create hangout</Link>
       </div>
 
       <div className="logoutBtn mr-3">
